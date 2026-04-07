@@ -1,29 +1,4 @@
-// Zed keymap
-//
-// For information on binding keys, see the Zed
-// documentation: https://zed.dev/docs/key-bindings
-//
-// To see the default key bindings run `zed: open default keymap`
-// from the command palette.
 [
-  {
-    "context": "Workspace",
-    "bindings": {
-      // "shift shift": "file_finder::Toggle"
-    },
-  },
-  {
-    "context": "Editor && vim_mode == insert",
-    "bindings": {
-      // "j k": "vim::NormalBefore"
-    },
-  },
-  {
-    "context": "vim_mode == insert",
-    "bindings": {
-      "space q": "vim::NormalBefore",
-    },
-  },
   {
     "context": "Workspace",
     "bindings": {
@@ -39,7 +14,7 @@
   {
     "context": "Workspace",
     "bindings": {
-      "space t t": "terminal_panel::Toggle",
+      "ctrl-t": "terminal_panel::Toggle",
     },
   },
   {
@@ -49,45 +24,33 @@
     },
   },
   {
-    "context": "vim_mode == visual",
+    "context": "Editor && vim_mode == visual",
     "unbind": {
       "ctrl-[": "vim::SwitchToNormalMode",
     },
   },
   {
     "context": "Editor && vim_mode == waiting && (vim_operator == ys || vim_operator == cs)",
-    "bindings": {
-      "space q": "vim::SwitchToNormalMode",
-    },
-  },
-  {
-    "context": "Editor && vim_mode == waiting && (vim_operator == ys || vim_operator == cs)",
     "unbind": {
       "escape": "vim::SwitchToNormalMode",
     },
   },
   {
-    "context": "vim_mode == visual",
-    "bindings": {
-      "space q": "vim::SwitchToNormalMode",
-    },
-  },
-  {
-    "context": "vim_mode == visual",
+    "context": "Editor && vim_mode == visual",
     "unbind": {
       "escape": "vim::SwitchToNormalMode",
     },
   },
   {
     "context": "VimControl && !menu",
-    "bindings": {
-      "space q": "vim::SwitchToNormalMode",
+    "unbind": {
+      "escape": "vim::SwitchToNormalMode",
     },
   },
   {
-    "context": "VimControl && !menu",
-    "unbind": {
-      "escape": "vim::SwitchToNormalMode",
+    "context": "Editor",
+    "bindings": {
+      "ctrl-alt-p": "editor::ToggleEditPrediction",
     },
   },
 ]
